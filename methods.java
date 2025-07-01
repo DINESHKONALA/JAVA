@@ -52,7 +52,7 @@ public class methods {
     {
         int money = 5000000; 
         int books_count = 20;// Amount of money received
-        shop a= new shop(); // Creating an object of the shop class
+        shop a = new shop(); // Creating an object of the shop class
         a.books(money,books_count);
     }
 }
