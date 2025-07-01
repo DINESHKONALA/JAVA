@@ -1,4 +1,4 @@
-class A
+class OutSideClass
 {   
     
     public void Show()
@@ -7,7 +7,7 @@ class A
         
 
     }
-    class B
+    class InsideClass
     {
         public void config()
         {
@@ -21,7 +21,10 @@ public class InnerClass
 {
     public static void main(String[]args)
     {
-        A obj = new A();
+        OutSideClass obj = new OutSideClass();
         obj.Show();
+
+        OutSideClass.InsideClass obj2 = obj.new InsideClass(); // Creating an instance of the inner class B
+        obj2.config(); // Calling the method of the inner class B
     }
 }
