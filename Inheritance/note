@@ -1,0 +1,5 @@
+you don't need a java file to inherit you need a class file 
+
+java dosen't support multiple inheritance
+you can inherit only one class at a time
+
