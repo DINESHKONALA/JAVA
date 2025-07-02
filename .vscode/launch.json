@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "array_with_enhanced_loop",
+            "request": "launch",
+            "mainClass": "Arrray.array_with_enhanced_loop",
+            "projectName": "JAVA_f246a6ac"
+        },
+        {
+            "type": "java",
+            "name": "NeedOfInterfaceWithEX",
+            "request": "launch",
+            "mainClass": "NeedOfInterfaceWithEX",
+            "projectName": "JAVA_f246a6ac"
+        },
+        {
+            "type": "java",
             "name": "Interface",
             "request": "launch",
             "mainClass": "Interface",

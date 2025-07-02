@@ -1,3 +1,4 @@
+package Arrray;
 public class jugged_and_3d_array 
 {
     public static void main(String[] arg)
