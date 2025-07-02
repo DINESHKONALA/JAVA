@@ -6,6 +6,34 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Interface",
+            "request": "launch",
+            "mainClass": "Interface",
+            "projectName": "JAVA_f246a6ac"
+        },
+        {
+            "type": "java",
+            "name": "AbstractandAnonymousInnerClass",
+            "request": "launch",
+            "mainClass": "AbstractandAnonymousInnerClass",
+            "projectName": "JAVA_f246a6ac"
+        },
+        {
+            "type": "java",
+            "name": "AbstractKeyword",
+            "request": "launch",
+            "mainClass": "AbstractKeyword",
+            "projectName": "JAVA_f246a6ac"
+        },
+        {
+            "type": "java",
+            "name": "array_with_enhanced_loop",
+            "request": "launch",
+            "mainClass": "array_with_enhanced_loop",
+            "projectName": "JAVA_f246a6ac"
+        },
+        {
+            "type": "java",
             "name": "for_loop",
             "request": "launch",
             "mainClass": "for_loop",

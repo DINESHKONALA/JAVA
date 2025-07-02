@@ -3,7 +3,7 @@ class OutSideClass
     
     public void Show()
     {
-        System.out.println("in A class");
+        System.out.println("in OutSideClass");
         
 
     }
@@ -11,7 +11,14 @@ class OutSideClass
     {
         public void config()
         {
-            System.out.println("in B class");
+            System.out.println("in InsideClass");
+        }
+    }
+    static class StaticInsideClass
+    {
+        public void config()
+        {
+            System.out.println("in StaticInsideClass");
         }
     }
 }
@@ -24,7 +31,10 @@ public class InnerClass
         OutSideClass obj = new OutSideClass();
         obj.Show();
 
-        OutSideClass.InsideClass obj2 = obj.new InsideClass(); // Creating an instance of the inner class B
-        obj2.config(); // Calling the method of the inner class B
+        OutSideClass.InsideClass obj2 = obj.new InsideClass(); // Creating an instance of the inner class 
+        obj2.config(); // Calling the method of the inner class 
+
+        OutSideClass.StaticInsideClass obj3 = new OutSideClass.StaticInsideClass(); // Creating an instance of the static inner class 
+        obj3.config();
     }
 }

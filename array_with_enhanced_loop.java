@@ -4,7 +4,7 @@ class students
     int roll_no;
     String section;
 }
-class array_with_enhanced_loop 
+public class array_with_enhanced_loop 
 {
     public static void main(String[] args) 
     {
