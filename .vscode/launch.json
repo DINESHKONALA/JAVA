@@ -1,0 +1,364 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "EnumClass",
+            "request": "launch",
+            "mainClass": "Enum.EnumClass",
+            "projectName": "JAVA_f246a6ac"
+        },
+        {
+            "type": "java",
+            "name": "Enum",
+            "request": "launch",
+            "mainClass": "Enum",
+            "projectName": "JAVA_f246a6ac"
+        },
+        {
+            "type": "java",
+            "name": "MoreOnInterfaces",
+            "request": "launch",
+            "mainClass": "MoreOnInterfaces",
+            "projectName": "JAVA_f246a6ac"
+        },
+        {
+            "type": "java",
+            "name": "array_with_enhanced_loop",
+            "request": "launch",
+            "mainClass": "Arrray.array_with_enhanced_loop",
+            "projectName": "JAVA_f246a6ac"
+        },
+        {
+            "type": "java",
+            "name": "NeedOfInterfaceWithEX",
+            "request": "launch",
+            "mainClass": "NeedOfInterfaceWithEX",
+            "projectName": "JAVA_f246a6ac"
+        },
+        {
+            "type": "java",
+            "name": "Interface",
+            "request": "launch",
+            "mainClass": "Interface",
+            "projectName": "JAVA_f246a6ac"
+        },
+        {
+            "type": "java",
+            "name": "AbstractandAnonymousInnerClass",
+            "request": "launch",
+            "mainClass": "AbstractandAnonymousInnerClass",
+            "projectName": "JAVA_f246a6ac"
+        },
+        {
+            "type": "java",
+            "name": "AbstractKeyword",
+            "request": "launch",
+            "mainClass": "AbstractKeyword",
+            "projectName": "JAVA_f246a6ac"
+        },
+        {
+            "type": "java",
+            "name": "array_with_enhanced_loop",
+            "request": "launch",
+            "mainClass": "array_with_enhanced_loop",
+            "projectName": "JAVA_f246a6ac"
+        },
+        {
+            "type": "java",
+            "name": "for_loop",
+            "request": "launch",
+            "mainClass": "for_loop",
+            "projectName": "JAVA_f246a6ac"
+        },
+        {
+            "type": "java",
+            "name": "InnerClass",
+            "request": "launch",
+            "mainClass": "InnerClass",
+            "projectName": "JAVA_f246a6ac"
+        },
+        {
+            "type": "java",
+            "name": "WrapperClass",
+            "request": "launch",
+            "mainClass": "WrapperClass",
+            "projectName": "java_f255aeac"
+        },
+        {
+            "type": "java",
+            "name": "UpcastingAndDowncasting",
+            "request": "launch",
+            "mainClass": "UpcastingAndDowncasting",
+            "projectName": "java_f255aeac"
+        },
+        {
+            "type": "java",
+            "name": "Finalkeyword",
+            "request": "launch",
+            "mainClass": "Finalkeyword",
+            "projectName": "java_f255aeac"
+        },
+        {
+            "type": "java",
+            "name": "DynamicMethodDispatch",
+            "request": "launch",
+            "mainClass": "DynamicMethodDispatch",
+            "projectName": "java_f255aeac"
+        },
+        {
+            "type": "java",
+            "name": "Access_Modifiers",
+            "request": "launch",
+            "mainClass": "AccessModifiers.Access_Modifiers",
+            "projectName": "java_f255aeac"
+        },
+        {
+            "type": "java",
+            "name": "subclasses",
+            "request": "launch",
+            "mainClass": "subclasses",
+            "projectName": "java_f255aeac"
+        },
+        {
+            "type": "java",
+            "name": "Packages",
+            "request": "launch",
+            "mainClass": "Packages",
+            "projectName": "java_f255aeac"
+        },
+        {
+            "type": "java",
+            "name": "MethodOverriding",
+            "request": "launch",
+            "mainClass": "MethodOverriding",
+            "projectName": "java_f255aeac"
+        },
+        {
+            "type": "java",
+            "name": "ThisAndSuperMethod",
+            "request": "launch",
+            "mainClass": "Inheritance.ThisAndSuperMethod",
+            "projectName": "java_f255aeac"
+        },
+        {
+            "type": "java",
+            "name": "Multilevel_Inheritance_third_file_Demo",
+            "request": "launch",
+            "mainClass": "Inheritance.Multilevel_Inheritance_third_file_Demo",
+            "projectName": "java_f255aeac"
+        },
+        {
+            "type": "java",
+            "name": "Single_level_inheritance_Second_file_Demo",
+            "request": "launch",
+            "mainClass": "Inheritance.Single_level_inheritance_Second_file_Demo",
+            "projectName": "java_f255aeac"
+        },
+        {
+            "type": "java",
+            "name": "AdvCal_Demo",
+            "request": "launch",
+            "mainClass": "Inheritance.AdvCal_Demo",
+            "projectName": "java_f255aeac"
+        },
+        {
+            "type": "java",
+            "name": "AnonymousObjectDemo",
+            "request": "launch",
+            "mainClass": "AnonymousObjectDemo",
+            "projectName": "java_f255aeac"
+        },
+        {
+            "type": "java",
+            "name": "Default_Constructor_vs_Parameterized_Constructor_Demo",
+            "request": "launch",
+            "mainClass": "Default_Constructor_vs_Parameterized_Constructor_Demo",
+            "projectName": "java_f255aeac"
+        },
+        {
+            "type": "java",
+            "name": "constructor_Demo",
+            "request": "launch",
+            "mainClass": "constructor_Demo",
+            "projectName": "java_f255aeac"
+        },
+        {
+            "type": "java",
+            "name": "this_keyword_Demo",
+            "request": "launch",
+            "mainClass": "this_keyword_Demo",
+            "projectName": "java_f255aeac"
+        },
+        {
+            "type": "java",
+            "name": "encapsulationDemo",
+            "request": "launch",
+            "mainClass": "encapsulationDemo",
+            "projectName": "java_f255aeac"
+        },
+        {
+            "type": "java",
+            "name": "static_object",
+            "request": "launch",
+            "mainClass": "static_object",
+            "projectName": "java_f255aeac"
+        },
+        {
+            "type": "java",
+            "name": "static_variable",
+            "request": "launch",
+            "mainClass": "static_variable",
+            "projectName": "java_f255aeac"
+        },
+        {
+            "type": "java",
+            "name": "stringbuffer",
+            "request": "launch",
+            "mainClass": "stringbuffer",
+            "projectName": "java_f255aeac"
+        },
+        {
+            "type": "java",
+            "name": "array_with_enhanced_loop",
+            "request": "launch",
+            "mainClass": "array_with_enhanced_loop",
+            "projectName": "java_f255aeac"
+        },
+        {
+            "type": "java",
+            "name": "array_of_object",
+            "request": "launch",
+            "mainClass": "array_of_object",
+            "projectName": "java_f255aeac"
+        },
+        {
+            "type": "java",
+            "name": "jugged_and_3d_array",
+            "request": "launch",
+            "mainClass": "jugged_and_3d_array",
+            "projectName": "java_f255aeac"
+        },
+        {
+            "type": "java",
+            "name": "array",
+            "request": "launch",
+            "mainClass": "array",
+            "projectName": "java_f255aeac"
+        },
+        {
+            "type": "java",
+            "name": "method_overloading",
+            "request": "launch",
+            "mainClass": "method_overloading",
+            "projectName": "java_f255aeac"
+        },
+        {
+            "type": "java",
+            "name": "methods",
+            "request": "launch",
+            "mainClass": "methods",
+            "projectName": "java_f255aeac"
+        },
+        {
+            "type": "java",
+            "name": "class_and_object",
+            "request": "launch",
+            "mainClass": "class_and_object",
+            "projectName": "java_f255aeac"
+        },
+        {
+            "type": "java",
+            "name": "for_loop",
+            "request": "launch",
+            "mainClass": "for_loop",
+            "projectName": "java_f255aeac"
+        },
+        {
+            "type": "java",
+            "name": "while_loop",
+            "request": "launch",
+            "mainClass": "while_loop",
+            "projectName": "java_f255aeac"
+        },
+        {
+            "type": "java",
+            "name": "Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "ComparisitionOperator",
+            "request": "launch",
+            "mainClass": "ComparisitionOperator",
+            "projectName": "java_f255aeac"
+        },
+        {
+            "type": "java",
+            "name": "LogicalOperator",
+            "request": "launch",
+            "mainClass": "LogicalOperator",
+            "projectName": "java_f255aeac"
+        },
+        {
+            "type": "java",
+            "name": "SwitchStatement",
+            "request": "launch",
+            "mainClass": "SwitchStatement",
+            "projectName": "java_f255aeac"
+        },
+        {
+            "type": "java",
+            "name": "ifelse",
+            "request": "launch",
+            "mainClass": "ifelse",
+            "projectName": "java_f255aeac"
+        },
+        {
+            "type": "java",
+            "name": "litarals",
+            "request": "launch",
+            "mainClass": "litarals",
+            "projectName": "java_f255aeac"
+        },
+        {
+            "type": "java",
+            "name": "nani",
+            "request": "launch",
+            "mainClass": "nani",
+            "projectName": "java_f255aeac"
+        },
+        {
+            "type": "java",
+            "name": "operators",
+            "request": "launch",
+            "mainClass": "operators",
+            "projectName": "java_f255aeac"
+        },
+        {
+            "type": "java",
+            "name": "ternaryoperator",
+            "request": "launch",
+            "mainClass": "ternaryoperator",
+            "projectName": "java_f255aeac"
+        },
+        {
+            "type": "java",
+            "name": "typeconversion",
+            "request": "launch",
+            "mainClass": "typeconversion",
+            "projectName": "java_f255aeac"
+        },
+        {
+            "type": "java",
+            "name": "variable",
+            "request": "launch",
+            "mainClass": "variable",
+            "projectName": "java_f255aeac"
+        }
+    ]
+}
