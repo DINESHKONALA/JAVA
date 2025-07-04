@@ -49,3 +49,4 @@ public class static_object
     }
 
 }
+

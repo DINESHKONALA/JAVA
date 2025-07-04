@@ -23,3 +23,5 @@ public class Annotation
         b.method(); // Calls overridden method in class B
     }
 }
+
+

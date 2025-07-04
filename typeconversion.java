@@ -5,5 +5,4 @@ public class typeconversion {
         b = (byte)(b + 10); // Explicit conversion from int to byte
         System.out.println("Byte value: " + b);
     }
-    
 }

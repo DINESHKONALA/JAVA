@@ -44,6 +44,5 @@ public class array_with_enhanced_loop
         }
 
 
-
     }
 }

@@ -15,6 +15,5 @@ public class WrapperClass
         String str = "123";
         Integer num3 = Integer.parseInt(str); // parsing String to Integer
         System.out.println("Parsed Integer from String: " + num3);
-    }
-    
+    }   
 }

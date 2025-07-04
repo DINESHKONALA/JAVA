@@ -32,5 +32,4 @@ public class Interface
         System.out.println("Interface variable name: " + Cars.name); 
     }
     
-
 }

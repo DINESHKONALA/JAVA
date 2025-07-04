@@ -13,3 +13,4 @@ public class Single_level_inheritance_first_file {
         return a * b;
     }
 }
+

@@ -24,6 +24,5 @@ public class AbstractKeyword
         Car obj = new Lamborghini(); // Creating an instance of the subclass
         obj.drive(); // Calling the implemented method
         obj.stop(); // Calling the regular method from the abstract class
-    }
-    
+    }   
 }

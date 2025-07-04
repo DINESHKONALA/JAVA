@@ -5,3 +5,4 @@ public class Protected {
     protected String Name = "Protected Name"; // Protected access modifier
     
 }
+

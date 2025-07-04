@@ -22,3 +22,4 @@ class Multilevel_Inheritance_third_file_Demo {
         System.out.println("Multiplication: " + thirdCalculator.mul(a, b));
     }
 }
+

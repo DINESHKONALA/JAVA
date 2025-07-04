@@ -79,3 +79,4 @@ public class Enum
         System.out.println(s.getClass().getSuperclass()); // it tells that enum is a subclass of java.lang.Enum
     }
 }
+

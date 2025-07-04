@@ -53,3 +53,4 @@ class Default_Constructor_vs_Parameterized_Constructor_Demo {
         System.out.println("Object created with parameterized constructor: " + obj3 + "  and age is " + obj3.getAge() + " and name is " + obj3.getName());
     }
 }
+

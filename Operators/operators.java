@@ -27,3 +27,4 @@ public class operators {
         System.out.println("The value of a after all operations is: " + a);
     }
 }
+

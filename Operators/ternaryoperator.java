@@ -14,3 +14,4 @@ public class ternaryoperator {
         System.out.println("The result of the ternary operation is: " + result);
     }
 }
+
