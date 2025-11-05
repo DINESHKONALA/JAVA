@@ -1,3 +1,4 @@
+package others;
 public class typeconversion {
     public static void main(String []arg)
     {

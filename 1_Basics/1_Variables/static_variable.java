@@ -1,4 +1,3 @@
-package Variables;
 class mobile_info
 {
     String brand;

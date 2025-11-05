@@ -1,4 +1,4 @@
-package Annotation;
+package others.Annotation;
 @Deprecated // This is an annotation indicating that the class is deprecated
 class  A
 {

@@ -1,3 +1,4 @@
+package others;
 class litarals{
     public static void main(String a[])
     {

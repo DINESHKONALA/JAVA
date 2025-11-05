@@ -3,7 +3,7 @@
 // Enums are often used in switch statements and can have methods and fields like regular classes.
 // Enums can also implement interfaces.
 // Enum class cannot be extended, but it can implement interfaces.
-package Enum;
+package others.Enum;
 enum Status  
 {   
     // This are Enum constantse.

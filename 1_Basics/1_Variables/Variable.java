@@ -1,5 +1,5 @@
-package Variables;
-public class variable{
+
+public class Variable{
     public static void main(String a[]) 
     {
         int d = 10;
@@ -14,7 +14,7 @@ public class variable{
     }
     
 }
-class m extends variable {
+class m extends Variable {
     m() {
         System.out.println("Constructor of m called");
     }

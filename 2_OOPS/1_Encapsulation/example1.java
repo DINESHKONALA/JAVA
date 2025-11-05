@@ -1,4 +1,4 @@
-public class encapsulation {
+public class example1 {
     private String name;
     private int age;
 
@@ -23,7 +23,7 @@ public class encapsulation {
 class encapsulation_Demo {
     public static void main(String[] args) 
     {
-        encapsulation obj1 = new encapsulation();
+        example1 obj1 = new example1();
         obj1.setName("John Doe");
         obj1.setAge(30);
         System.out.println("Name: " + obj1.getName());

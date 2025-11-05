@@ -1,3 +1,4 @@
+package others;
 public class stringbuffer {
     public static void main(String[] arg)
     {

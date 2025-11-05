@@ -1,4 +1,4 @@
-package Enum;
+package others.Enum;
 enum Laptop 
 {
     MacBook(2000),
