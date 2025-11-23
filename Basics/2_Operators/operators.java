@@ -1,4 +1,4 @@
-package Operators;
+// package 2_Operators;
 public class operators {
     public static void main(String []arg){
         int a = 111;

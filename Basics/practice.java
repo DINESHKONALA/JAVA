@@ -1,4 +1,4 @@
-
+package Basics;
 
 class sam{
     static void name(String name) {

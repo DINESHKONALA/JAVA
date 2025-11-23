@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class SwitchStatement {
     public static void main(String[] args) {
         int day = 3; // Example day of the week (1-7)
@@ -28,6 +30,41 @@ public class SwitchStatement {
             default:
                 System.out.println("Invalid day");
         }
+
+        Scanner sc = new Scanner(System.in);
+        System.out.print("enter value of a = ");
+        int a = sc.nextInt();
+        
+        System.out.print("enter value of b = ");
+        int b = sc.nextInt();
+        
+        System.out.print("enter an op = ");
+        char c = sc.next().charAt(0);
+        
+        switch (c) {
+            case '-' :
+                System.out.println(a-b);
+                break;
+            
+            case '+':
+                System.out.println(a+b);
+                break;
+            
+            case '*':
+                System.out.println(a*b);
+                break;
+                
+            
+            case '/' :
+                System.out.println(a/b);
+                break;
+    
+            
+            default:
+                System.out.println("invalid op");
+        }
+        
+    }
+
     } 
-}
 

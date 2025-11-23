@@ -1,7 +1,7 @@
 package others.Annotation;
 @Deprecated // This is an annotation indicating that the class is deprecated
 class  A
-{
+{   
     public void method() {
         System.out.println("Method in class A");
     }
