@@ -1,3 +1,4 @@
+package others;
 // package others;
 // import Inheritance.*; // Importing all classes from the Inheritance package
 // import Inheritance.Single_level_inheritance.*; // Importing all classes from the Single_level_inheritance package

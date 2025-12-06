@@ -1,5 +1,6 @@
+------------------------------------------------------------------------------------
 1. Write a Java program to read two integers and print their sum.
-
+------------------------------------------------------------------------------------
 import java.util.Scanner;
 
 public class Main{
@@ -35,7 +36,7 @@ public class Main{
 
 ----------------------------------------------------------------------------------------------------------------------
 3. Read an integer and print whether it is even or odd.
-
+----------------------------------------------------------------------------------------------------------------------
 import java.util.Scanner;
 public class Main{
     public static void main(String [] args){
@@ -443,6 +444,38 @@ public class Main{
 -------------------------------------------------------------------------------------------------------------------
 21. Print Fibonacci series up to N terms.
 -------------------------------------------------------------------------------------------------------------------
+import java.util.Scanner;
+public class Main
+{
+    public static void main(String [] args)
+    {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("enter a range to get fibonacci series value = ");
+        int range = sc.nextInt();
+        int first = 0;
+        int second = 1;
+        for (int i = 1 ; i<=range ; i++)
+        {
+            if (i==1)
+            {
+                System.out.println(i+" value is "+first);
+            }
+            else if (i==2)
+            {
+                System.out.println(i+" value is "+second);
+                
+            }
+            else
+            {
+                int d = first+second;
+                first = second;
+                second = d;
+                System.out.println(i+" value is "+d);
+            }
+        }
+    }
+}
+
 -------------------------------------------------------------------------------------------------------------------
 22. Count digits in a number using a loop.
 -------------------------------------------------------------------------------------------------------------------
@@ -523,6 +556,252 @@ public class Main
 --------------------------------------------------------------------------------------------
 25. Print all prime numbers between 1 and 100.
 --------------------------------------------------------------------------------------------
+import java.util.Scanner;
+public class Main
+{
+    public static void main(String [] args)
+    {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("enter range to print prime numbers = ");
+        int a = sc.nextInt();
+        
+        for(int i = 2; i<=a; i++)
+        {   
+            int z = 0;
+            for(int j = 1; j<=i; j++)
+            {
+                if (i%j==0)
+                {
+                    z++;
+                }
+                
+            }
+            if (z==2)
+            {
+              System.out.println(i) ; 
+            }
+            
+        }
+    }
+}
+
+
+--------------------------------------------------------------------------------------------------------
+26.skip odd number and print even numbers using continue in else if
+--------------------------------------------------------------------------------------------------------
+import java.util.Scanner;
+public class Main
+{
+	public static void main (String[] args)
+	{
+        Scanner sc = new Scanner(System.in);
+        System.out.print("enter range to print odd and even = ");
+        int a = sc.nextInt();
+        
+        for(int i = 1 ; i<=a; i++)
+        {
+            if ((i%2)!=0)
+            {   
+                //System.out.println(i+" is an odd number");
+                continue;
+                
+            }
+            else
+            {
+                System.out.println(i+" is an even number");
+            }
+        }
+	}
+
+}
+
+
+----------------------------------------------------------------------------------------------------
+type conversions in java
+----------------------------------------------------------------------------------------------------
+    java supports two main types of conversions
+        Implicit conversions  and explicit conversions
+1) the implicit conversions
+    Done automatically by java when converting smaller -> larger datatype
+from                        to
+-----                       --
+byte                        short, int, long, float, double
+short                       int, long, float, double
+char                        int, long, float, double
+int                         long, float, double
+long                        float, double
+float                       double 
+
+2) the explicit conversions
+    we must covert manually when larger -> shorter datatype
+from            to
+----            --
+double          float, long, int, short, byte, char
+float           long, int, short, byte, char
+long            int, short, byte, char
+int             short, byte, char
+short           byte, char    
+------------------------------------------------------------------------------------------
+| Data Type   | Size    | Range                 | Default Value | Example                |
+| ----------- | ------- | --------------------- | ------------- | ---------------------- |
+| **byte**    | 1 byte  | -128 to 127           | 0             | `byte b = 10;`         |
+| **short**   | 2 bytes | -32,768 to 32,767     | 0             | `short s = 10000;`     |
+| **int**     | 4 bytes | -2^31 to 2^31-1       | 0             | `int a = 100;`         |
+| **long**    | 8 bytes | -2^63 to 2^63-1       | 0L            | `long l = 100000L;`    |
+| **float**   | 4 bytes | 6–7 decimal digits    | 0.0f          | `float f = 3.14f;`     |
+| **double**  | 8 bytes | 15 decimal digits     | 0.0d          | `double d = 9.81;`     |
+| **char**    | 2 bytes | 0 to 65,535 (Unicode) | '\u0000'      | `char c = 'A';`        |
+| **boolean** | ~1 bit  | true/false            | false         | `boolean flag = true;` |
+------------------------------------------------------------------------------------------
+implicity conversions
+---------------------
+byte b = 10;
+short s = b;
+int i = b;
+long l = b;
+float f = b;
+double = b;
+---------------------
+explicit conversions
+---------------------
+double d = 10.123456789;
+float f = (float) d;
+long l = (long) d;
+int i = (int) d;
+short s = (short) d;
+byte b = (byte) d;  
+char c = (char) d;
+--------------------------
+
+
+
+
+------------------------------------------------------------------------------------
+bitwise operato 
+------------------------------------------------------------------------------------
+| Operator | Meaning              | Rule                      |                   |
+| -------- | -------------------- | ------------------------- | ----------------- |
+| `&`      | AND                  | 1 only if both bits are 1 |                   |
+| `|`      | OR                   | 1 if any bit is 1         |
+| `^`      | XOR                  | 1 if bits are different   |                   |
+| `~`      | NOT                  | Flip all bits             |                   |
+| `<<`     | Left shift           | Multiply by 2             |                   |
+| `>>`     | Right shift          | Divide by 2 (keeps sign)  |                   |
+| `>>>`    | Unsigned right shift | Divide by 2 (fills 0s)    |                   |
+------------------------------------------------------------------------------------
+1. AND Operator (&)
+1 & 1 = 1  
+1 & 0 = 0  
+0 & 1 = 0  
+0 & 0 = 0
+
+Explanation:
+  0101   (5)
+& 0011   (3)
+---------
+  0001   = 1
+
+int a = 5, b = 3;
+System.out.println(a & b); // 1
+---------------------------------
+2. OR Operator (|)
+✔ Rule:
+1 | 1 = 1  
+1 | 0 = 1  
+0 | 1 = 1  
+0 | 0 = 0
+
+Explanation:
+  0101   (5)
+| 0011   (3)
+---------
+  0111   = 7
+
+int a = 5, b = 3;
+System.out.println(5 | 3); // 7
+-------------------------------------
+3. XOR Operator (^)
+✔ Rule:
+1 ^ 1 = 0  
+1 ^ 0 = 1  
+0 ^ 1 = 1  
+0 ^ 0 = 0
+
+Explanation:
+  0101   (5)
+^ 0011   (3)
+---------
+  0110   = 6
+
+int a = 5, b = 3;
+System.out.println(5 ^ 3); // 6
+
+------------------------------------------
+4. NOT Operator (~)
+✔ Rule:
+~1 = 0  
+~0 = 1
+
+✔ Table:
+| A | ~A |
+| - | -- |
+| 0 | 1  |
+| 1 | 0  |
+
+Explanation:
+   00000000 00000000 00000000 00000101   (5)
+~  -----------------------------------
+   11111111 11111111 11111111 11111010   (-6)
+
+System.out.println(~5); // -6
+
+-----------------------------------------------
+5. Left Shift (<<)
+its adds bit to left side that you mention after Operator (<<) 
+
+Explanation:
+Shifts bits to the LEFT  
+Adds 0 on RIGHT
+
+5 = 0101
+5 << 1 = 1010 = 10
+
+✔ Java:
+int a =  8;      // 1 0 0 0
+int b = a << 1;  // 1 0 0 0 0   -> 16
+int c = a << 2;  // 1 0 0 0 0 0 -> 32  
+System.out.println(5 << 1); // 10
+System.out.println(5 << 2); // 20
+
+-----------------------------------------------
+6. Right Shift (>>)
+its removes bit to left side that you mention after Operator (<<) 
+
+Example:
+0101 >> 1 = 0010
+
+20 = 00010100
+20 >> 1 = 00001010 = 10
+
+✔ Java:
+int a = 8;      // 1 0 0 0  -> 8
+int b = a >> 1; // 1 0 0    -> 0 1 0 0  -> 4
+int c = a >> 2; // 1 0      -> 0 0 1 0  -> 10
+System.out.println(20 >> 1); // 10
+
+-----------------------------------------------
+7. Unsigned Right Shift (>>>)
+0 comes from LEFT always  
+Rightmost bit falls off
+
+0101 >>> 1 = 0010
+
+int a = 10;         // 1 0 1 0 
+int b = a >>> 1;    // 1 0 1    -> 0 1 0 1  -> 5
+int c = a >>> 2;    // 1 0      -> 0 0 1 0  -> 2
+System.out.println(-20 >>> 1);
+
+------------------------------------------------
 
 
 
@@ -531,10 +810,186 @@ public class Main
 
 
 
+---------------------------------------------------------------------------------------------------------------
+String operations
+---------------------------------------------------------------------------------------------------------------
+There are 50+ string methods in Java
+in java string is a class and it is litaral data type
+to code string has two ways using method and normal ways
+
+String a = "hello";
+String objA = new String("hello world"); 
+System.out.println(a , objA);
+System.out.println(new ClassName()); // you will get the class id
+
+----------------------------------------------
+String comparare
+it only checks the id not inside data of var. to compare strings we use method like equals( objName)
+String a = "hi";
+String objA = new String("hi");
+String b = "hi";
+System.out.println(a==b); // true
+System.out.println(a==objA); // false
+System.out.println(a.equals(objA)); //true
+
+----------------------------------------------
+LIST OF String methods
+1. Information & Comparison:
+length():                               Returns the number of characters in the string.
+isEmpty():                              Checks if the string has a length of 0.
+equals(Object obj):                     Compares the string to another object for equality.
+equalsIgnoreCase(String anotherString): Compares two strings, ignoring case differences.
+compareTo(String anotherString):        Compares two strings lexicographically.
+compareToIgnoreCase(String anotherString):  Compares two strings lexicographically, ignoring case.
+startsWith(String prefix):              Checks if the string begins with the specified prefix.
+endsWith(String suffix):                Checks if the string ends with the specified suffix. 
+contains(CharSequence s):               Checks if the string contains the specified sequence of characters.
+hashCode():                             Returns a hash code for the string.
+
+2. Character & Substring Access:
+charAt(int index):                      Returns the character at the specified index.
+indexOf(int ch):                        Returns the index of the first occurrence of a character.
+indexOf(String str):                    Returns the index of the first occurrence of a substring.
+lastIndexOf(int ch):                    Returns the index of the last occurrence of a character.
+lastIndexOf(String str):                Returns the index of the last occurrence of a substring.
+substring(int beginIndex):              Returns a new string that is a substring of this string.
+substring(int beginIndex, int endIndex): Returns a new string that is a substring of this string, from beginIndex to endIndex - 1.
+subSequence(int beginIndex, int endIndex): Returns a CharSequence that is a subsequence of this string. 
+
+3. Modification & Transformation:
+concat(String str):                     Concatenates the specified string to the end of this string.
+replace(char oldChar, char newChar):    Replaces all occurrences of a character.
+replace(CharSequence target, CharSequence replacement): Replaces all occurrences of a CharSequence.
+replaceAll(String regex, String replacement): Replaces all substrings that match a regular expression.
+replaceFirst(String regex, String replacement): Replaces the first substring that matches a regular expression.
+toLowerCase():                          Converts all characters in the string to lowercase.
+toUpperCase():                          Converts all characters in the string to uppercase.
+trim():                                 Removes leading and trailing whitespace.
+strip():                                Removes leading and trailing whitespace (including Unicode whitespace).
+stripLeading():                         Removes leading whitespace.
+stripTrailing():                        Removes trailing whitespace.
+indent(int n):                          Indents each line of the string by n spaces.
+repeat(int count):                      Returns a new string consisting of the original string repeated count times.
+
+4. Conversion & Utility:
+toCharArray():                          Converts the string to a new character array.
+getBytes():                             Encodes the string into a sequence of bytes.
+split(String regex):                    Splits the string into an array of strings based on a regular expression delimiter.
+join(CharSequence delimiter, CharSequence... elements): Joins multiple CharSequence elements with a delimiter.
+format(String format, Object... args):  Returns a formatted string using the specified format string and arguments.
+valueOf(various_types):                 Static methods to convert various data types to their string representation.
+intern():                               Returns a canonical representation for the string object.
+
+----------------------------------------------
+string compareing methods 
+
+equals()
+String a = "fact";
+String objA = new String("fact");
+String b = "FACT";
+System.out.println(a.equals(objA));  //true
+System.out.println(b.equals(objA)); //false
+
+equalsIgnoreCase()
+String a = "fact";
+String objA = new String("FACT");
+System.out.println(a.equalsIgnoreCase(objA)); //true
+
+
+contains()
+String a = "hello";
+System.out.println(a.contains("h")); // true (it search that char int var )
+
+
+startsWith()
+endsWith()
+String a = "victory";
+System.out.println(a.startsWith("vi")); //true
+System.out.println(a.endsWith("ry"));   //false
+
+
+length()
+trim()
+String a = "maya";
+System.out.println(a.length()); // 4
+String b = " maya ";
+System.out.println(b.length()); // 6
+System.out.println(b.trim().length());  // 4
+System.out.println(b.trim()); // maya (remove the space between the beginIndex and endIndex)
+
+
+toCharArray()
+String a = "linda";
+System.out.println(a.toCharArray());
+char[] b = a.toCharArray();
+System.out.println(b);
+
+
+toUpperCase()
+toLowerCase()
+String a = "blessed";
+String b = "SHALLOM";
+System.out.println(a.toUpperCase());    // BLESSED
+System.out.println(b.toUpperCase());    // SHALLOM
+
+
+indexOf()
+lastIndexOf()
+String a = "generation";
+System.out.println(a.indexOf('n'));     // 2
+System.out.println(a.lastIndexOf('n')); // 9
+
+
+substring()
+String a = "abraham";
+System.out.println(a.substring(2)); // raham
+System.out.println(a.substring(2 , 6)); // raha
+
+
+split()
+String a = "generation make nation greater by grace of god";
+System.out.println(a.split(" "));   // [Ljava.lang.String;@7ad041f3
+System.out.println(Arrays.toString(a.split(" ")));   // [generation, make, nation, greater, by, grace, of, god]
+System.out.println(Arrays.toString(a.split("e")));  // [g, n, ration mak, nation gr, at, r by grac, of god]
+
+
+charAt()
+String a = "its me";
+System.out.println(a.charAt(2));    // s
+
+
+replace()
+replaceAll()
+ 
+
+
+valueOf()
+String a = "132";
+System.out.println(Integer.valueOf(a)); // it converts string to integer
+String b = 122345;
+System.out.println(String.valueOf(b)); // it converts int to string
+
+
+isEmpty()
+isBlank()
+String a = "";
+String b = " ";
+System.out.println(a.isEmpty());    // true 
+System.out.println(b.isEmpty());    // false (because it has space in it)
+System.out.println(b.trim().isEmpty()); // true
+System.out.println(a.isBlank());    // true
+System.out.println(b.isBlank());    // true
 
 
 
-
+--------------------------------------------------------------------------------------------------------------
+interface
+--------------------------------------------------------------------------------------------------------------
+The interface is a blueprint of a class.
+the interface tell only what to do 
+ex= interface Main{
+    public void add(); // here we only create method not the block of code 
+}
 
 
 
