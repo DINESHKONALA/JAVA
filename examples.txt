@@ -987,11 +987,501 @@ interface
 --------------------------------------------------------------------------------------------------------------
 The interface is a blueprint of a class.
 the interface tell only what to do 
-ex= interface Main{
+ex= 
+interface Main
+{
     public void add(); // here we only create method not the block of code 
+}
+-----------------
+
+// import java.util.Arrays;
+// in interface we use three methods astract method , default method and static method.
+
+// abstract method is we can create method but we cannot implement code in it.
+// default method we implement it and allows it Override in other class.
+// satic method we just implement it.
+interface A
+{
+    public void add(); //abstract method
+
+    public void cut(); // abstract method
+
+    default void paste() // default method
+    {
+        System.out.println("paste");
+    }
+    static void audio()
+    {
+        System.out.println("audio");
+    }
+}
+class b implements A
+{
+    public void add()
+    {
+        System.out.println("add");
+    }
+    public void cut()
+    {
+        System.out.println("cut");
+    }
+    public void  sum()
+    {
+        System.out.println("sum");
+    }
+    @Override
+    public void paste()
+    {
+        System.out.println("class b paste");
+    }
+}
+class c implements A
+{
+    public void add()
+    {
+        System.out.println("class c add");
+    }
+    public void cut()
+    {
+        System.out.println("class c cut");
+    }
+    public void  sum()
+    {
+        System.out.println("class c sum");
+    }
+}
+public class sample 
+{ 
+    public static void main(String[] args) 
+    { 
+        b b = new b();
+        b.add();
+        b.cut();
+        b.paste();
+        b.sum();
+
+        c c = new c();
+        c.add();
+
+    }
 }
 
 
+--------------------------------------
+
+// using private methods in interface
+interface A
+{
+    public void add();
+
+    default void sub()
+    {
+        getPrivateMethod();
+
+    }
+
+    static void mul()
+    {
+        getStaticPrivateMethod();
+    }
+
+    private void getPrivateMethod()
+    {
+        System.out.println("This is private method in interface");
+
+    }
+
+    private static void getStaticPrivateMethod()
+    {
+        System.out.println("this is static private methon in interface");
+    } 
+}
+class B implements A
+{
+    public void add()
+    {
+        System.out.println("this is add method");
+    } 
+
+}
+public class sample 
+{ 
+    public static void main(String[] args) 
+    { 
+        A.mul();
+        A obj = new B();
+        obj.sub();  
+        // A.sub(); 
+        
+
+    }
+}
+
+----------------------------------------
+
+functional interface
+---------------------
+def = the functional interface has only one abstract methods and n number of non abstract methods.
+we use @FunctionalInterface annoitation to make sure that interface is functional interface.
+
+two ways to create abstract method
+void mathodName();
+abstarct void methodName();
+
+
+@FunctionalInterface
+interface A
+{
+    void drive(); // abstract method
+
+    default void honk()
+    {
+        System.out.println("default method");
+    }
+    private void light()
+    {
+        System.out.println("private method");
+    }
+    static void breaks()
+    {
+        System.out.println("static method");
+    }
+}
+
+class sample
+{
+    public static void main(String [] args)
+    {
+        A obj = new A()
+        {
+            public void drive()
+            {
+                System.out.println("abstract method");
+            }
+        };
+        obj.drive();
+    }
+}
+
+----------------------------------------------
+Lamdas experssion ( -> )
+in functional interface we use lamdas expression to reduce code syntax.
+to use lamdas expression we need functional interface
+lamdas expression used to crete method
+// in lamdas expression we have 3 components
+// 1 parameter ()
+// 2 arrow token ->
+// 3 function body {}
+
+@FunctionalInterface
+interface AFunctionalInterface
+{
+    abstract void drive();
+}
+
+class sample
+{
+    public static void main(String [] args)
+    {
+        AFunctionalInterface obj = () -> System.out.println("this is a single line lamdas expression");
+        obj.drive();
+        
+        AFunctionalInterface obj1 = () -> 
+        {
+            System.out.println("the is multiple line lamdas expression");
+            System.out.println("second line of lamdas expression");
+        };
+        obj1.drive();
+    }
+}
+
+
+-------------------------
+// using parameter in lamdas function
+// if functional interface use parameter we must specify parameter before lamda expression
+@FunctionalInterface
+interface A
+{
+    void Method(int age);
+}
+class sample
+{
+    public static void main(String [] args)
+    {
+
+        A obj2 = age ->
+        {
+            System.out.println("your age is " + age);
+        };
+        obj2.Method(50);
+
+        
+
+    }
+}
+
+----------------------------------------------------------------------------------------------
+Collections
+----------------------------------------------------------------------------------------------
+collections is a framework provided by java
+
+images/collection framework.png
+images/collectons.png
+images/hierarchy of collection interface.png
+images/hierarchy of list interface.png
+
+in array we have to create with fixed length and we cannot change the size of length after we created the array.
+to overcome this problem we use ArrayList and Vector
+
+---------------------
+Vector
+---------------------
+in vector the initialCapacity is 10.
+vector is an 100% incrementation
+
+creating vector
+----------------
+package com.a.collections.VECTOR;
+import java.util.Arrays;
+import java.util.Vector;
+
+public class CreateVector 
+{
+	public static void main(String [] abc)
+	{
+		// here we create vector without specifying data type
+		// so we can add different data type
+		Vector a = new Vector();
+		a.add("nani");
+		a.add(1);
+		a.add(null);
+		a.add(1);
+		System.out.println(a);
+		
+		
+		// creating a vector with specifying data type
+		Vector<Integer> arr = new Vector<>(7); // here we specifying data type and capacity
+		//to specify data type we can use only warper classes
+		arr.add(1);
+		arr.add(null);
+		arr.add(1);
+		arr.add(3);
+		arr.add(2);
+		System.out.println(arr.capacity());
+		System.out.println(arr);
+		
+		Object[] array1 = new Object[] { 1,2,3,4,5,6,7,8,9};
+		Vector a1 = new Vector(Arrays.asList(array1));
+		System.out.println(a1);
+		System.out.println(a1.capacity());	
+	}
+}
+
+
+--------------------------
+add() in vector
+
+package com.a.collections.VECTOR;
+//import VECTOR*;
+import java.util.Vector;
+public class AddElementInVector 
+{
+	public static void main(String [] abc)
+	{
+		Vector<Integer> A1 = new Vector<>();
+		A1.add(1);
+		System.out.println("array A1 = " + A1);
+		
+		A1.add(0 , 10); // here we indexing the value. "0" is index value and "10" is value
+		System.out.println("array A1 = " + A1);
+		
+		Vector<Integer> B1 = new Vector<>();
+		B1.add(null);
+		B1.addAll(A1); // here we are adding A1 elements in B1 vector
+		System.out.println("array B1 = " + B1);
+		B1.addAll(0 , A1); // here we are adding A1 elements in B1 vector with specifying index value 
+		System.out.println("array B1 = " + B1);		
+	}
+}
+
+
+-------------------------
+incrementations in vector
+
+package com.a.collections.VECTOR;
+
+import java.util.Vector;
+
+public class IncrementationInVector 
+{
+
+	public static void main(String[] args) 
+	{
+		Vector<String> i = new Vector<>();
+		System.out.println("array = " + i);
+		System.out.println("size = " + i.size()); // Size is count of element in array
+		System.out.println("capacity = " + i.capacity()); // capacity is length of a array
+		System.out.println();
+			
+		i.add("nami");
+		i.add("Genesis");
+		i.add("Exodus");
+		i.add("Leviticus");
+		i.add("Numbers");
+		i.add("deuteronomy");
+		i.add("Jouhua");
+		i.add("Judges");
+		i.add("Ruth");
+		i.add("1 Samuel");
+		System.out.println("array = " + i);
+		System.out.println("size = " + i.size());
+		System.out.println("capacity = " + i.capacity());
+		System.out.println();
+		
+		i.add("2 Samuel");
+		System.out.println("array = " + i);
+		System.out.println("size = " + i.size());
+		System.out.println("capacity = " + i.capacity());
+		System.out.println();
+		
+		Vector<String> vector = new Vector<>(5 , 6); // 5 is initialCapacity and 6 is capacityIncrement
+		System.out.println("array = " + vector);
+		System.out.println("size = " + vector.size());
+		System.out.println("capacity = " + vector.capacity());
+		System.out.println();
+		
+		vector.add("1 kings");
+		vector.add("2 Kings");
+		vector.add("1 Chronicles");
+		vector.add("2 chronicles");
+		vector.add("Ezra");
+		vector.add("Nehemiah");
+		System.out.println("array = " + vector);
+		System.out.println("size = " + vector.size());
+		System.out.println("capacity = " + vector.capacity());
+
+	}
+
+}
+--------------------------
+get() element in vector
+// we can retrieve elements by passing index number 
+package com.a.collections.VECTOR;
+import java.util.Vector;
+public class GetElementsInVector 
+{
+	public static void main(String[] args) 
+	{
+		Vector<String> g1 = new Vector<>();
+		g1.add("Nehemiah");
+		g1.add("Esther");
+		g1.add("Job");
+		g1.add("Psalms");
+		g1.add("Proverbs");
+		System.out.println(g1.get(1));
+	}
+}
+---------------------------
+remove() element in vector (delete)
+
+package com.a.collections.VECTOR;
+import java.util.Vector;
+public class RemoveElementInVector 
+{
+	public static void main(String[] args) 
+	{
+		Vector<String> r = new Vector<>();
+		r.add("moses");
+		r.add("bezalel");
+		r.add("esther");
+		Vector<String> r1 = new Vector<>();
+		r1.addAll(r);
+		r1.add("oholiab");
+		r1.add("arron");
+		r1.add("ruth");
+		System.out.println(r1);
+		
+		r1.remove(0); // here we remove element by specifying index value
+		System.out.println("here we remove elements by using index value = " + r1);
+		
+		r1.remove("arron"); // here we remove elements by specifying index value
+		System.out.println("here we remove elements by using elements = " + r1);
+		
+		r1.removeAll(r); // here to remove entire vector elements we use removeAll()
+		System.out.println("here we remove elemnts by using vector = " + r1);
+		
+		r1.clear(); // by using clear() we can remover entire elements in vector
+		System.out.println("here we clear entire elements in vector = " + r1);
+	}
+}
+--------------------------------
+contains() elements in vector
+
+package com.a.collections.VECTOR;
+import java.util.Vector;
+public class ContainsInVector 
+{
+	public static void main(String[] args) 
+	{
+		Vector<String> c = new Vector<>();
+		c.add("Ecclesiastes");
+		c.add("song of songs");
+		c.add("isaiah");
+		
+		Vector<String> c1 = new Vector<>();
+		c1.addAll(c);
+		c1.add("jermiah");
+		c1.add("lamentation");
+		c1.add("Ezekiel");
+		
+		System.out.println(c1);
+		
+		System.out.println(c1.contains("jermiah")); // it checks the element is present in vector or not and gives the output true or false
+		
+		System.out.println(c1.containsAll(c)); // it can check the given vector elements is present in vector or not
+	}
+}
+---------------------------
+set() elements in vector to modify element
+
+package com.a.collections.VECTOR;
+import java.util.Vector;
+public class SetElementInVector {
+	public static void main(String[] args) {
+		Vector<String> s = new Vector<>();
+		s.add("job");
+		s.add("jeremiah");
+		System.out.println(s);
+		s.set(0 , "Isaiah"); // here we specify index number to modify perticular element
+		System.out.println(s);
+	}
+}
+---------------------------
+indexOf() and lastIndexOf() to retrive element index number
+
+package com.a.collections.VECTOR;
+import java.util.Vector;
+public class IndexOfAndLastIndexOf 
+{
+	public static void main(String [] args)
+	{
+		Vector<String> i = new Vector<>();
+		i.add("lamentations");
+		i.add("Ezekiel");
+		i.add("daniel");
+		i.add("daniel");
+		
+		System.out.println(i);
+		System.out.println("index of lamentations = " + i.indexOf("lamentations"));
+		System.out.println("index of daniel = " + i.indexOf("daniel"));
+		System.out.println("last index of daniel = " + i.lastIndexOf("daniel"));
+	}
+}
+------------------------
+ArrayList
+------------------------
+in ArrayList initialCapacity is 0. if we add any element it is 5.
+it has 50% incrementation
 
 
 
@@ -1001,6 +1491,23 @@ ex= interface Main{
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+----------------------------------------------------------------------------------------------------------
 import java.util.Scanner;
 public class Main{
     public static void main(String [] args){

@@ -1,12 +1,28 @@
-// import java.util.Arrays;
+@FunctionalInterface
+interface A
+{
+    void Method();
+}
+class B implements A
+{
+    public void Value()
+    {
+        int a = 20;
+        System.out.println("value of a is " + a);
+        return a;
+    }
+}
+class sample
+{
+    public static void main(String [] args)
+    {
+        // using parameter in lamdas function
+        // if functional interface use parameter we must specify parameter before lamda expression
 
-public class sample 
-{ 
-    public static void main(String[] args) 
-    { 
-String a = "lets go";
-System.out.println(a.replace("g" , "t"));   // lets to
-System.out.println(a.replace("go" , "us go"));  // lets us go
-System.out.println(a.replaceAll("go","go*"));   // lets go*     }
+        B obj1 = 
+        obj2.Method(50);=
+
+        
+
     }
 }
